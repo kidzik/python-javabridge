@@ -83,7 +83,10 @@ def get_jvm_include_dirs():
             include_dirs += ["/System/Library/Frameworks/JavaVM.Framework/Headers"]
     elif is_linux:
         include_dirs += [os.path.join(java_home,'include'),
-                         os.path.join(java_home,'include','linux')]
+                         os.path.join(java_home,'include','linux'),
+                         '/usr/lib/jvm/java-11-openjdk-amd64/include/',
+                         '/usr/lib/jvm/java-11-openjdk-amd64/include/linux/',
+        ]
 
     return include_dirs
 
