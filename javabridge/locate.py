@@ -235,7 +235,6 @@ def find_jre_bin_jdk_so():
                 for place_to_look in ('client','server'):
                     jvm_dir = os.path.join(jre_libexec, arch, place_to_look)
                     jvm_so = os.path.join(jvm_dir, lib_prefix + "jvm" + lib_suffix)
-                    print(jvm_so)
                     if os.path.isfile(jvm_so):
                         return (jre_bin, jvm_so)
     return (jre_bin, None)
